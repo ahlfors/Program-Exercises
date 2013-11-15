@@ -1,7 +1,7 @@
 ﻿
 '''
 
-[example]
+[Example]
 input:  (auto)Calorimetry- Crash Course Chemistry #19.srt
 output:   19. Calorimetry- Crash Course Chemistry #19.srt
 
@@ -10,7 +10,15 @@ output:   38. Nuclear Chemistry- Crash Course Chemistry #38.srt
 
 
 [Usage]
-Double click this .py file. Execute it.
+1. This program need Used in conjunction with "Youtube Auto Subtitle Downloader"
+( http://userscripts.org/scripts/show/168581 )
+this script can download youtube auto subtitle.
+download file name will be "(auto)<something>.srt"
+like: (auto)The Cold War- Crash Course US History #37.srt
+
+2. Double click this .py file. Execute it.
+
+
 
 
 [Chinese]
@@ -54,16 +62,6 @@ for filename in filename_list:
 # told user everything is done.
 #
 print ("Program Execution is complete.")
-
-
-
-
-
-
-
-
-
-
 
 
 
