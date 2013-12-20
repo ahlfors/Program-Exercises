@@ -48,26 +48,11 @@ output: 39. (English)Civil Rights and the 1950s- Crash Course US History #39.srt
 #
 ##############################
 def exit_handler():
-    print ("Press [Enter] Exit")
+    print ("Press [Enter] Exit.")
     input('')
 import atexit
 atexit.register(exit_handler)
 # 告诉程序在退出前执行这个函数, 即便程序出错时它也是可以运行的
-
-
-
-
-
-
-
-##############################
-#
-# told user program start running
-# 告诉用户程序开始运行
-#
-##############################
-print ("start working")
-
 
 
 
@@ -117,7 +102,7 @@ for filename in filename_list:
         os.rename(filename, new_filename)
         # 真正重命名文件的是这一行代码.
     except:
-        print ("fail rename " + filename)
+        print ("Fail rename: " + filename)
 
 
 
@@ -144,7 +129,7 @@ for filename in filename_list:
             os.rename(filename, new_filename)
             # 真正重命名文件的代码是上面这一行
     except:
-        print ("fail rename " + filename)
+        print ("Fail rename: " + filename)
 
 
 
@@ -157,8 +142,8 @@ for filename in filename_list:
 # 告诉用户程序运行完成
 #
 ##############################
-print("everything done.")
-
+print("Everything done.")
+print("")
 
 
 

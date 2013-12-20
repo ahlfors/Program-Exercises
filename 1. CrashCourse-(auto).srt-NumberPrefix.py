@@ -2,7 +2,7 @@
 '''
 注意: 程序运行路径中不能有中文
 
-一句话总结: 删(auto), 加数字前缀
+一句话总结: 删(auto), 加数字前缀.
 
 程序用于批量重命名 Crash Course 自动字幕的文件名.
 例子在下面.
@@ -43,6 +43,6 @@ for filename in filename_list:
         os.rename(filename, new_filename)
         # rename file.
     except:
-        print ("rename " + filename + " fail.")
+        print ("Fail rename: " + filename)
 
 
