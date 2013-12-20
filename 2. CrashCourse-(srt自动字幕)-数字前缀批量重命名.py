@@ -1,5 +1,15 @@
 ﻿
 '''
+一句话总结: 删(auto), 加数字前缀
+
+程序用于批量重命名 Crash Course 自动字幕的文件名.
+例子在下面.
+本程序需要和 Youtube Auto Subtitle Downloader 搭配使用.
+( http://userscripts.org/scripts/show/168581 )
+
+
+
+
 input:  (auto)Calorimetry- Crash Course Chemistry #19.srt
 output:   19. Calorimetry- Crash Course Chemistry #19.srt
 
@@ -9,14 +19,6 @@ output:   38. Nuclear Chemistry- Crash Course Chemistry #38.srt
 
 [Usage]
 2. Double click this .py file.
-
-
-
-[Chinese]
-程序用于批量重命名 Crash Course 自动字幕的文件名.
-例子上面有.
-本程序需要和 Youtube Auto Subtitle Downloader 搭配使用.
-( http://userscripts.org/scripts/show/168581 )
 
 '''
 

@@ -1,11 +1,28 @@
 ﻿
 '''
 
+【说明】:
+程序仅用于批量重命名 Crash Course 美国历史的[.mp4视频文件]和[.srt完整字幕文件]
+程序会给文件加上数字前缀.
+除此之外其他地方不会有修改.
+仅仅只是加数字前缀而已.
+
+The Rise of Conservatism- Crash Course US History #41.mp4
+会变成: 41. The Rise of Conservatism- Crash Course US History #41.mp4
+
+
+(English)The 1960s in America- Crash Course US History #40.srt
+会变成: 40. (English)The 1960s in America- Crash Course US History #40.srt
+
+
+---------------------------------------------------------------------
+
 【Explanation】
-Program will process .mp4 file and .srt file
+This program only for Crash Course.
+Program will rename .mp4 file and .srt file.
 
 
-【File Rename Example】
+【Rename Example】
 input:       The Rise of Conservatism- Crash Course US History #41.mp4
 output:  41. The Rise of Conservatism- Crash Course US History #41.mp4
 
@@ -19,22 +36,6 @@ output: 39. (English)Civil Rights and the 1950s- Crash Course US History #39.srt
 【Usage】
 1. Double click this file. (you need install python3.3)
 2. just wait.
-
-
-
-【中文】
-程序用于批量重命名 Crash Course 美国历史的[视频]和[完整字幕].
-程序会加上数字前缀.
-
-
-
-(English)The 1960s in America- Crash Course US History #40.srt
-会变成: 40. The 1960s in America- Crash Course US History #40.srt
-
-The Rise of Conservatism- Crash Course US History #41.mp4
-会变成: 41. The Rise of Conservatism- Crash Course US History #41.mp4
-
-
 
 '''
 
