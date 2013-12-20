@@ -1,0 +1,125 @@
+﻿
+'''
+
+【Explanation】
+Program will process .mp4 file and .srt file
+
+
+【File Rename Example】
+input:       The Rise of Conservatism- Crash Course US History #41.mp4
+output:  41. The Rise of Conservatism- Crash Course US History #41.mp4
+
+input:       The Cold War in Asia- Crash Course US History #38.mp4
+output:  38. The Cold War in Asia- Crash Course US History #38.mp4
+
+input:      (English)Civil Rights and the 1950s- Crash Course US History #39.srt
+output: 39. (English)Civil Rights and the 1950s- Crash Course US History #39.srt
+
+
+【Usage】
+1. Double click this file. (you need install python3.3)
+2. just wait.
+
+
+
+【中文】
+程序用于批量重命名 Crash Course 美国历史的[视频]和[完整字幕].
+程序会加上数字前缀.
+
+
+
+(English)The 1960s in America- Crash Course US History #40.srt
+会变成: 40. The 1960s in America- Crash Course US History #40.srt
+
+The Rise of Conservatism- Crash Course US History #41.mp4
+会变成: 41. The Rise of Conservatism- Crash Course US History #41.mp4
+
+
+
+'''
+
+
+
+import glob # for get filename.
+import os   # for rename file.
+
+
+
+
+##############################
+#
+# process .mp4 file
+# 处理mp4文件
+#
+##############################
+
+filename_list = glob.glob("[a-zA-Z]*.mp4")
+# 这个正则的意思是: 把第一个字母是英文字母, 而且后缀是mp4的文件全挑出来.
+
+# Civil Rights and the 1950s- Crash Course US History #39.mp4
+# 上面这个能通过
+
+# 38. The Cold War in Asia- Crash Course US History #38.mp4
+# 上面这个不能通过
+
+# 这样的话, 已被重命名过的文件就不会再被重命名一次.
+
+for filename in filename_list:
+    try:
+        number = filename.split("#")[1].split(".")[0]
+        # 拿到数字, 比如 Civil Rights and the 1950s- Crash Course US History #39.mp4 最后的那个39
+        new_filename = number + ". " + filename
+        # 拼接新文件名 [数字][.][一个空格][原文件名]
+        os.rename(filename, new_filename)
+        # 真正重命名文件的是这一行代码.
+    except:
+        print ("fail rename " + filename)
+
+
+
+
+
+##############################
+#
+# process .srt file
+# 处理srt完整字幕
+#
+##############################
+filename_list = glob.glob("*.srt")
+for filename in filename_list:
+    try:
+        if filename.startswith("(English)"):
+            # 如果文件名以 (English) 开头, 那么说明是完整字幕. 我们这里不处理自动字幕.
+            
+            number = filename.split("#")[1].split(".")[0]
+            # 拿到原文件名最后的数字
+
+            new_filename = number + ". " + filename
+            # 拼接出新文件名 (注意此时还没有重命名文件, 只是拼接出新文件名而已)
+
+            os.rename(filename, new_filename)
+            # 真正重命名文件的代码是上面这一行
+    except:
+        print ("fail rename " + filename)
+
+
+
+
+
+
+##############################
+#
+# told user program finish running.
+# 告诉用户程序运行完成
+#
+##############################
+print("everything done.")
+
+
+
+
+
+
+
+
+
