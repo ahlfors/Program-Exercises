@@ -1,5 +1,6 @@
 ﻿
 '''
+注意: 程序运行路径中不能有中文
 
 【说明】:
 程序仅用于批量重命名 Crash Course 美国历史的[.mp4视频文件]和[.srt完整字幕文件]
@@ -40,9 +41,51 @@ output: 39. (English)Civil Rights and the 1950s- Crash Course US History #39.srt
 '''
 
 
+##############################
+#
+# error handler
+# 错误处理
+#
+##############################
+def exit_handler():
+    print ("Press [Enter] Exit")
+    input('')
+import atexit
+atexit.register(exit_handler)
+# 告诉程序在退出前执行这个函数, 即便程序出错时它也是可以运行的
 
+
+
+
+
+
+
+##############################
+#
+# told user program start running
+# 告诉用户程序开始运行
+#
+##############################
+print ("start working")
+
+
+
+
+
+
+
+
+##############################
+#
+# import module
+# 导入所需模块
+#
+##############################
 import glob # for get filename.
 import os   # for rename file.
+
+
+
 
 
 
